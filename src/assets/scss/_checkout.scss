@@ -1,0 +1,488 @@
+/*------- 21. Checkout page  -----------*/
+.shippingRow {
+  display: flex;
+  align-items: center;
+
+  ul {
+    display: block !important;
+    width: 40%;
+
+    &:nth-child(2) {
+      width: 60%;
+
+      li {
+        margin-bottom: 40px;
+
+        &:last-child {
+          margin-bottom: 0px;
+        }
+
+        .login-toggle-btn {
+          display: flex;
+          align-items: center;
+
+          label {
+            margin-bottom: 0px
+          }
+        }
+      }
+    }
+  }
+}
+
+.agreement-info-wrap {
+  font-size: 14px;
+  margin-bottom: 15px;
+  height: 130px;
+  padding: 17px 20px;
+
+  color: #333;
+  border: 1px solid #e6e6e6;
+  background: transparent none repeat scroll 0 0;
+}
+
+.billing-info-wrap {
+  h3 {
+    font-size: 20px;
+    font-weight: 500;
+
+    margin: 0 0 20px;
+
+    color: #000;
+  }
+
+  .error-msg {
+    color: red;
+    font-size: 13px;
+    font-weight: 300;
+  }
+
+
+
+  input[type="checkbox"] {
+    height: 15px;
+    margin: 0;
+    position: relative;
+    top: 1px;
+    width: 17px;
+  }
+
+
+
+  .billing-info,
+  .billing-select {
+    label {
+      margin: 0 0 7px;
+
+      color: #000;
+    }
+
+    input {
+      font-size: 14px;
+
+      padding-right: 10px;
+      padding-left: 20px;
+
+      color: #333;
+      border: 1px solid #e6e6e6;
+      background: transparent none repeat scroll 0 0;
+    }
+
+    input.billing-address {
+      margin-bottom: 10px;
+    }
+  }
+
+  .billing-select {
+    select {
+      font-size: 14px;
+
+      height: 45px;
+      padding: 2px 20px;
+
+      //background: rgba(0, 0, 0, 0) url("../../assets/img/icon-img/select.png") no-repeat scroll right 18px center;
+
+      cursor: pointer;
+
+      color: #333;
+      border: 1px solid #e6e6e6;
+
+      // -webkit-appearance: none;
+      // -moz-appearance: none;
+    }
+  }
+
+  .checkout-account {
+    display: flex;
+    align-items: center;
+
+    input {
+      display: inline-block;
+      float: left;
+
+      width: 10px;
+      height: 10px;
+
+      border: 1px solid #9fa0a2;
+    }
+
+    span {
+      font-weight: 400;
+
+      margin: 0 0 0 12px;
+
+      color: #333;
+    }
+  }
+
+  .checkout-account-toggle {
+    input {
+      font-size: 14px;
+
+      margin: 0 0 20px;
+      padding-right: 10px;
+      padding-left: 20px;
+
+      color: #333;
+      border: 1px solid #e6e6e6;
+      background: transparent none repeat scroll 0 0;
+    }
+
+    button.checkout-btn {
+      font-weight: 500;
+
+      z-index: 9;
+
+      padding: 10px 30px;
+
+      cursor: pointer;
+      text-transform: uppercase;
+
+      color: #fff;
+      border: medium none;
+      border-radius: 50px;
+      background-color: $theme-color;
+
+      &:hover {
+        background-color: #333;
+      }
+    }
+  }
+
+  .additional-info-wrap {
+    h4 {
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .additional-info {
+      label {
+        font-size: 14px;
+
+        margin: 0 0 7px;
+
+        color: #333;
+      }
+
+      textarea {
+        font-size: 14px;
+
+        height: 138px;
+        padding: 17px 20px;
+
+        color: #333;
+        border: 1px solid #e6e6e6;
+        background: transparent none repeat scroll 0 0;
+      }
+    }
+  }
+
+  .different-address {
+    display: none;
+  }
+}
+
+.your-order-area {
+  @media #{$md-layout} {
+    margin-top: 30px;
+  }
+
+  @media #{$xs-layout} {
+    margin-top: 30px;
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: 500;
+
+    margin: 0 0 20px;
+
+    color: #000;
+  }
+
+  .your-order-wrap {
+    padding: 38px 45px 44px;
+
+    background: #f6f6f6;
+
+    @media #{$lg-layout} {
+      padding: 30px 20px 36px;
+    }
+
+    @media #{$xs-layout} {
+      padding: 30px 20px 36px;
+    }
+
+    .your-order-product-info {
+      .your-order-top {
+        ul {
+          display: flex;
+          justify-content: space-between;
+
+          li {
+            font-size: 16px;
+            font-weight: 500;
+
+            list-style: outside none none;
+          }
+        }
+      }
+
+      .your-order-middle {
+        margin: 22px 0;
+        padding: 19px 0 18px;
+
+        border-top: 1px solid #dee0e4;
+        border-bottom: 1px solid #dee0e4;
+
+        ul {
+          li {
+            display: flex;
+            justify-content: space-between;
+
+            margin: 0 0 10px;
+          }
+        }
+      }
+
+      .your-order-bottom {
+        margin-bottom: 18px;
+        padding: 0px 0 19px;
+        border-bottom: 1px solid #dee0e4;
+
+        ul {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          li {
+            font-size: 14px;
+            font-weight: 400;
+
+            list-style: none;
+
+            input[type="radio"] {
+              height: 15px;
+              margin: 0;
+              position: relative;
+              top: 1px;
+              width: 17px;
+            }
+          }
+
+          li.your-order-shipping {
+            font-size: 16px;
+            font-weight: 400;
+
+            color: #212121;
+
+
+
+          }
+        }
+      }
+
+      .your-order-sub-total {
+        margin: 18px 0 18px;
+        // padding: 0px 0 19px;
+
+        border-bottom: 1px solid #dee0e4;
+
+        ul {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          li.order-total {
+            font-size: 15px;
+            font-weight: 400;
+
+            color: #212121;
+          }
+
+          li {
+            font-size: 15px;
+            font-weight: 400;
+            color: #212121;
+            list-style: outside none none;
+          }
+        }
+      }
+
+      .your-order-total {
+        // margin: 18px 0 33px;
+        padding: 0px 0 19px;
+
+        // border-top: 1px solid #dee0e4;
+        border-bottom: 1px solid #dee0e4;
+
+        ul {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          li.order-total {
+            font-size: 18px;
+            font-weight: 500;
+
+            color: #212121;
+          }
+
+          li {
+            font-size: 16px;
+            font-weight: 500;
+
+            list-style: outside none none;
+
+            color: $theme-color;
+          }
+        }
+      }
+    }
+  }
+
+  .payment-method {
+    input[type="checkbox"] {
+      height: 15px;
+      margin: 0;
+      position: relative;
+      top: 1px;
+      width: 17px;
+    }
+
+    .card-info {
+      padding: 25px 5px 40px 5px;
+      border: 1px solid #e5e5e5;
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.05);
+
+    }
+  }
+
+  .icon-container {
+    float: right;
+    padding-top: 20px;
+
+    i {
+      margin-left: 10px;
+      font-size: 24px;
+    }
+  }
+
+  .payment-accordion {
+    margin: 0 0 16px;
+
+    &:last-child {
+      margin: 0 0 0;
+    }
+
+    h4 {
+      font-size: 16px;
+
+      margin: 0;
+
+      color: #212121;
+
+      a {
+        position: relative;
+
+        display: block;
+
+        color: #212121;
+
+        &:hover {
+          color: $theme-color;
+        }
+      }
+    }
+
+    .panel-body {
+      padding: 5px 0 0 0;
+
+      p {
+        font-size: 14px;
+
+        padding: 0 0 0 10px;
+
+        color: #333;
+      }
+    }
+  }
+
+  .place-order>a,
+  .place-order>button {
+    font-weight: 500;
+    line-height: 1;
+
+    z-index: 9;
+
+    display: block;
+
+    width: 100%;
+    padding: 18px 20px;
+
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    background: none;
+    background-color: $theme-color;
+
+    &:hover {
+      background-color: #333;
+    }
+  }
+}
+
+.checkout-area {
+  @media #{$xs-layout} {
+    &.pb-100 {
+      padding-bottom: 60px;
+    }
+  }
+
+  .checkout-heading {
+    display: flex;
+    align-items: center;
+    background-color: #f6f6f6;
+    border-top: 5px solid $theme-color;
+    color: #5b5858;
+    min-height: 55px;
+    line-height: 1.6;
+    padding: 5px 30px;
+    margin-bottom: 30px;
+  }
+}
+
+iframe {
+
+  margin: none;
+  padding: none;
+  border: none;
+  line-height: 0;
+  float: left;
+}
